@@ -1,0 +1,1998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>United Code Compliance | Kitchen Hood Cleaning Service</title>
+  <meta name="description" content="United Code Compliance provides insured commercial kitchen hood cleaning, exhaust cleaning, fan cleaning, and restaurant hood maintenance across Orange County, San Diego, Los Angeles, and Riverside County." />
+
+  <style>
+    :root {
+      --primary: #0b5da8;
+      --primary-dark: #08477f;
+      --accent: #e21f26;
+      --gold: #f4b400;
+      --dark: #1f2933;
+      --black: #111111;
+      --light: #f5f5f5;
+      --white: #ffffff;
+      --muted: #666666;
+      --border: #dddddd;
+      --footer: #151515;
+      --footer-2: #0f0f0f;
+      --shadow: 0 8px 26px rgba(0, 0, 0, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--dark);
+      background: var(--white);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1170px, calc(100% - 30px));
+      margin: 0 auto;
+    }
+
+    .top-contact-bar {
+      background: var(--primary);
+      color: var(--white);
+      font-size: 14px;
+    }
+
+    .top-contact-inner {
+      min-height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .top-contact-left,
+    .top-contact-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .top-contact-bar a {
+      color: var(--white);
+    }
+
+    .top-contact-bar span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .top-contact-bar .icon {
+      color: var(--gold);
+      font-weight: bold;
+    }
+
+    .main-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    }
+
+    .header-inner {
+      min-height: 98px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-area img {
+      width: 115px;
+      height: 76px;
+      object-fit: contain;
+    }
+
+    .logo-title {
+      line-height: 1.15;
+    }
+
+    .logo-title strong {
+      display: block;
+      color: var(--primary);
+      font-size: 21px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .logo-title span {
+      display: block;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+
+    .desktop-nav > a,
+    .dropdown > button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 98px;
+      padding: 0 13px;
+      border: 0;
+      background: transparent;
+      color: var(--dark);
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    .desktop-nav > a:hover,
+    .dropdown > button:hover {
+      color: var(--primary);
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 290px;
+      background: var(--white);
+      border-top: 3px solid var(--accent);
+      box-shadow: var(--shadow);
+      display: none;
+      z-index: 100;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 12px 15px;
+      border-bottom: 1px solid #eeeeee;
+      color: var(--dark);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .dropdown-menu a:hover {
+      background: #f7f7f7;
+      color: var(--primary);
+    }
+
+    .quote-nav-btn {
+      background: var(--accent) !important;
+      color: var(--white) !important;
+      min-height: 44px !important;
+      margin-left: 12px;
+      padding: 0 18px !important;
+      border-radius: 3px;
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: var(--primary);
+      color: var(--white);
+      border: 0;
+      padding: 10px 13px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      display: none;
+      background: var(--white);
+      border-top: 1px solid var(--border);
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 13px 15px;
+      border-bottom: 1px solid #eeeeee;
+      color: var(--dark);
+      font-weight: 700;
+    }
+
+    .hero-slider {
+      position: relative;
+      overflow: hidden;
+      background: #111;
+    }
+
+    .hero-slide {
+      min-height: 610px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,0.72), rgba(0,0,0,0.48), rgba(0,0,0,0.16)),
+        url("IMG_5417.JPG") center/cover no-repeat;
+      color: var(--white);
+    }
+
+    .hero-content {
+      max-width: 680px;
+      padding: 80px 0 120px;
+    }
+
+    .hero-content .small-heading {
+      color: var(--gold);
+      font-size: 18px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(38px, 5vw, 68px);
+      line-height: 1.04;
+      font-weight: 900;
+      margin-bottom: 18px;
+      text-transform: capitalize;
+      text-shadow: 0 3px 10px rgba(0,0,0,0.35);
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 28px;
+      max-width: 630px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 24px;
+      border-radius: 3px;
+      border: 0;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .btn-red {
+      background: var(--accent);
+      color: var(--white);
+    }
+
+    .btn-red:hover {
+      background: #be151b;
+    }
+
+    .btn-blue {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .btn-blue:hover {
+      background: var(--primary-dark);
+    }
+
+    .hero-service-tabs {
+      position: relative;
+      margin-top: -82px;
+      z-index: 5;
+    }
+
+    .tabs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .tab-card {
+      padding: 28px 28px 24px;
+      border-right: 1px solid var(--border);
+      min-height: 180px;
+      background: var(--white);
+    }
+
+    .tab-card:last-child {
+      border-right: 0;
+    }
+
+    .tab-card h3 {
+      color: var(--primary);
+      font-size: 22px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .tab-card p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 17px;
+    }
+
+    .tab-card a {
+      color: var(--accent);
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    section {
+      padding: 72px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto 42px;
+    }
+
+    .section-title .pretitle {
+      color: var(--accent);
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 14px;
+      margin-bottom: 7px;
+      letter-spacing: 0.04em;
+    }
+
+    .section-title h2 {
+      font-size: clamp(28px, 3vw, 40px);
+      color: var(--dark);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .intro-section {
+      padding-top: 118px;
+      background: var(--white);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .intro-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .intro-images img {
+      width: 100%;
+      height: 325px;
+      object-fit: cover;
+      border: 6px solid var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .intro-copy h2 {
+      color: var(--primary);
+      font-size: clamp(30px, 3.3vw, 44px);
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .intro-copy p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .service-list-section {
+      background: #f8f8f8;
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .service-item {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 20px;
+      background: var(--white);
+      padding: 18px;
+      border: 1px solid var(--border);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    }
+
+    .service-item img {
+      width: 190px;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .service-item h3 {
+      color: var(--primary);
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .service-item p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    .service-item a {
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .why-section {
+      background: var(--white);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .why-copy h2 {
+      color: var(--primary);
+      font-size: clamp(30px, 3.2vw, 42px);
+      line-height: 1.2;
+      margin-bottom: 17px;
+    }
+
+    .why-copy p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .check-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: var(--dark);
+      font-weight: 700;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      flex: 0 0 auto;
+      width: 22px;
+      height: 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 900;
+      margin-top: 2px;
+    }
+
+    .why-card {
+      background: var(--primary);
+      color: var(--white);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .why-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 5px solid rgba(255,255,255,0.22);
+    }
+
+    .why-card h3 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .brand-section {
+      background: #f7f7f7;
+      padding: 58px 0;
+    }
+
+    .brand-strip {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 18px;
+    }
+
+    .brand-box {
+      min-height: 88px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--primary);
+      font-weight: 900;
+      text-transform: uppercase;
+      padding: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+    }
+
+    .symptoms-section {
+      background:
+        linear-gradient(rgba(0,0,0,0.76), rgba(0,0,0,0.76)),
+        url("IMG_4500.JPG") center/cover no-repeat;
+      color: var(--white);
+    }
+
+    .symptoms-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .symptoms-copy h2 {
+      font-size: clamp(30px, 3.1vw, 42px);
+      line-height: 1.18;
+      margin-bottom: 16px;
+    }
+
+    .symptoms-copy p {
+      color: rgba(255,255,255,0.82);
+      margin-bottom: 22px;
+    }
+
+    .symptom-list {
+      background: rgba(255,255,255,0.96);
+      color: var(--dark);
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .symptom-list ul {
+      list-style: none;
+      display: grid;
+      gap: 13px;
+    }
+
+    .symptom-list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #eeeeee;
+      font-weight: 700;
+    }
+
+    .symptom-list li:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .symptom-list li::before {
+      content: "•";
+      color: var(--accent);
+      font-size: 28px;
+      line-height: 18px;
+      margin-top: 2px;
+    }
+
+    .compliance-section {
+      background: var(--white);
+    }
+
+    .compliance-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .compliance-image img {
+      height: 450px;
+      width: 100%;
+      object-fit: cover;
+      box-shadow: var(--shadow);
+    }
+
+    .compliance-copy h2 {
+      color: var(--primary);
+      font-size: clamp(30px, 3vw, 41px);
+      line-height: 1.18;
+      margin-bottom: 16px;
+    }
+
+    .compliance-copy p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .gallery-section {
+      background: #f8f8f8;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .gallery-item {
+      border: 0;
+      cursor: pointer;
+      overflow: hidden;
+      height: 220px;
+      background: #ddd;
+      padding: 0;
+      position: relative;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.2s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.06);
+    }
+
+    .gallery-item::after {
+      content: "View Photo";
+      position: absolute;
+      inset: 0;
+      background: rgba(11, 93, 168, 0.72);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .gallery-item:hover::after {
+      opacity: 1;
+    }
+
+    .testimonials-section {
+      background: var(--white);
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: #f8f8f8;
+      border: 1px solid var(--border);
+      padding: 26px;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+    }
+
+    .stars {
+      color: var(--gold);
+      font-size: 20px;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .testimonial-card p {
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 18px;
+    }
+
+    .testimonial-card strong {
+      color: var(--primary);
+    }
+
+    .quote-section {
+      background:
+        linear-gradient(rgba(11, 93, 168, 0.92), rgba(11, 93, 168, 0.92)),
+        url("IMG_4497.JPG") center/cover no-repeat;
+      color: var(--white);
+    }
+
+    .quote-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .quote-copy h2 {
+      font-size: clamp(30px, 3.2vw, 44px);
+      line-height: 1.15;
+      margin-bottom: 15px;
+    }
+
+    .quote-copy p {
+      color: rgba(255,255,255,0.86);
+      margin-bottom: 18px;
+    }
+
+    .quote-contact-box {
+      background: rgba(0,0,0,0.22);
+      padding: 22px;
+      margin-top: 24px;
+      border-left: 5px solid var(--gold);
+    }
+
+    .quote-contact-box h3 {
+      font-size: 21px;
+      margin-bottom: 12px;
+    }
+
+    .quote-contact-box a {
+      display: block;
+      color: var(--white);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .quote-form {
+      background: var(--white);
+      color: var(--dark);
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .quote-form h3 {
+      color: var(--primary);
+      font-size: 28px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .quote-form > p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .form-group {
+      display: grid;
+      gap: 6px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-weight: 800;
+      font-size: 14px;
+      color: var(--dark);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      min-height: 46px;
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+      outline: none;
+      font: inherit;
+      background: #fbfbfb;
+    }
+
+    textarea {
+      min-height: 115px;
+      resize: vertical;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--primary);
+    }
+
+    .form-submit {
+      margin-top: 16px;
+      width: 100%;
+    }
+
+    .areas-footer-section {
+      background: #222222;
+      color: var(--white);
+      padding: 54px 0;
+    }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .areas-grid h2 {
+      font-size: 34px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .areas-grid p {
+      color: rgba(255,255,255,0.75);
+    }
+
+    .areas-list {
+      columns: 2;
+      list-style: none;
+    }
+
+    .areas-list li {
+      margin-bottom: 9px;
+      color: rgba(255,255,255,0.82);
+    }
+
+    .areas-list li::before {
+      content: "›";
+      color: var(--gold);
+      font-weight: 900;
+      margin-right: 8px;
+    }
+
+    footer {
+      background: var(--footer);
+      color: var(--white);
+    }
+
+    .footer-main {
+      padding: 58px 0 42px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 0.8fr 1fr;
+      gap: 30px;
+    }
+
+    .footer-logo {
+      background: var(--white);
+      padding: 10px;
+      width: 140px;
+      margin-bottom: 16px;
+    }
+
+    .footer-col h3 {
+      color: var(--white);
+      font-size: 18px;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+    }
+
+    .footer-col p,
+    .footer-col a,
+    .footer-col li {
+      color: rgba(255,255,255,0.72);
+      font-size: 15px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+    }
+
+    .footer-col li::before {
+      content: "›";
+      color: var(--gold);
+      margin-right: 8px;
+    }
+
+    .footer-bottom {
+      background: var(--footer-2);
+      padding: 17px 0;
+      color: rgba(255,255,255,0.55);
+      font-size: 14px;
+    }
+
+    .footer-bottom .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.88);
+      z-index: 300;
+      padding: 24px;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 94vw;
+      max-height: 88vh;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+
+    .lightbox button {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 45px;
+      height: 45px;
+      border: 0;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--white);
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 1000px) {
+      .desktop-nav {
+        display: none;
+      }
+
+      .mobile-toggle {
+        display: inline-block;
+      }
+
+      .header-inner {
+        min-height: 88px;
+      }
+
+      .tabs-grid,
+      .intro-grid,
+      .service-list,
+      .why-grid,
+      .symptoms-grid,
+      .compliance-grid,
+      .quote-grid,
+      .areas-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .brand-strip {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .testimonial-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* DARK FEATURE SECTIONS FROM PREVIOUS DESIGN */
+    .dark-clean-section {
+      background: #05080d;
+      color: #ffffff;
+      padding: 82px 0;
+    }
+
+    .dark-section-head {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 42px;
+      align-items: end;
+      margin-bottom: 34px;
+    }
+
+    .red-kicker {
+      color: var(--accent);
+      font-weight: 900;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .dark-section-head h2 {
+      font-size: clamp(36px, 5vw, 56px);
+      line-height: 0.95;
+      color: #ffffff;
+      letter-spacing: -0.06em;
+      margin: 0;
+    }
+
+    .dark-section-head p {
+      color: #d9e8ff;
+      font-size: 16px;
+      max-width: 520px;
+    }
+
+    .clean-card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .clean-card {
+      min-height: 254px;
+      background:
+        radial-gradient(circle at 88% 100%, rgba(226, 31, 38, 0.32), transparent 34%),
+        linear-gradient(180deg, #171b20, #11151b);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      padding: 21px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
+    }
+
+    .clean-number {
+      width: 45px;
+      height: 45px;
+      border-radius: 15px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(244, 180, 0, 0.12);
+      border: 1px solid rgba(244, 180, 0, 0.32);
+      color: var(--gold);
+      font-weight: 900;
+      font-size: 17px;
+      margin-bottom: 58px;
+    }
+
+    .clean-card h3 {
+      color: #ffffff;
+      font-size: 18px;
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+
+    .clean-card p {
+      color: #d9e8ff;
+      font-size: 15px;
+      margin: 0;
+    }
+
+    .dark-gallery-section {
+      background: #05080d;
+      color: #ffffff;
+      padding: 76px 0 92px;
+    }
+
+    .field-gallery-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr 0.9fr;
+      gap: 16px;
+    }
+
+    .field-photo-card {
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: #111827;
+      border-radius: 20px;
+      overflow: hidden;
+      min-height: 250px;
+      position: relative;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .field-photo-card.large {
+      grid-row: span 2;
+      min-height: 496px;
+    }
+
+    .field-photo-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      inset: 0;
+      transition: transform 0.22s ease;
+    }
+
+    .field-photo-card:hover img {
+      transform: scale(1.045);
+    }
+
+    .photo-caption {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 16px;
+      background: rgba(0, 0, 0, 0.82);
+      color: #ffffff;
+      border-radius: 999px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-weight: 900;
+      font-size: 14px;
+      z-index: 2;
+    }
+
+    .photo-caption span:last-child {
+      color: #ffffff;
+    }
+
+    @media (max-width: 1000px) {
+      .desktop-nav {
+        display: none;
+      }
+
+      .mobile-toggle {
+        display: inline-block;
+      }
+
+      .header-inner {
+        min-height: 88px;
+      }
+
+      .tabs-grid,
+      .intro-grid,
+      .service-list,
+      .why-grid,
+      .symptoms-grid,
+      .compliance-grid,
+      .quote-grid,
+      .areas-grid,
+      .footer-grid,
+      .dark-section-head {
+        grid-template-columns: 1fr;
+      }
+
+      .brand-strip {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .testimonial-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .clean-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .field-gallery-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .field-photo-card.large {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .top-contact-inner,
+      .top-contact-left,
+      .top-contact-right {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .logo-area img {
+        width: 88px;
+        height: 60px;
+      }
+
+      .logo-title strong {
+        font-size: 17px;
+      }
+
+      .hero-slide {
+        min-height: 520px;
+      }
+
+      .hero-content {
+        padding: 70px 0 120px;
+      }
+
+      .hero-service-tabs {
+        margin-top: -55px;
+      }
+
+      .tab-card {
+        padding: 22px;
+      }
+
+      .intro-section {
+        padding-top: 86px;
+      }
+
+      .intro-images,
+      .form-grid,
+      .brand-strip,
+      .gallery-grid,
+      .clean-card-grid,
+      .field-gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-item {
+        grid-template-columns: 1fr;
+      }
+
+      .service-item img {
+        width: 100%;
+        height: 230px;
+      }
+
+      .field-photo-card,
+      .field-photo-card.large {
+        min-height: 320px;
+        grid-column: auto;
+      }
+
+      .areas-list {
+        columns: 1;
+      }
+
+      section {
+        padding: 58px 0;
+      }
+    }
+
+    /* ===== ONE-SHADE BLACK BACKGROUND FIX ===== */
+
+    :root {
+      --site-black: #050505;
+    }
+
+    body,
+    .main-header,
+    .mobile-menu,
+    .intro-section,
+    .why-section,
+    .brand-section,
+    .compliance-section,
+    .testimonials-section,
+    .quote-section,
+    .areas-footer-section,
+    footer,
+    .footer-main,
+    .footer-bottom,
+    .service-list-section,
+    .gallery-section,
+    .dark-clean-section,
+    .dark-gallery-section,
+    .symptoms-section {
+      background: var(--site-black) !important;
+    }
+
+    /* Remove gradient/image backgrounds from sections that were creating different black tones */
+    .symptoms-section,
+    .quote-section {
+      background: var(--site-black) !important;
+    }
+
+    /* Cards can stay slightly lifted, but use the same black if you want total consistency */
+    .tab-card,
+    .service-item,
+    .why-card,
+    .brand-box,
+    .testimonial-card,
+    .quote-form,
+    .symptom-list,
+    .dropdown-menu,
+    .mobile-menu a,
+    .clean-card,
+    .field-photo-card {
+      background: var(--site-black) !important;
+      border-color: #2a2a2a;
+    }
+
+    /* Optional: make form fields same black too */
+    input,
+    select,
+    textarea {
+      background: var(--site-black) !important;
+      color: #ffffff;
+      border-color: #333333;
+    }
+
+    /* ===== FINAL TEXT COLOR CLEANUP ===== */
+
+    /* Make normal readable text white */
+    body,
+    body p,
+    body li,
+    body span,
+    body a,
+    body label,
+    body strong,
+    body button,
+    body input,
+    body select,
+    body textarea,
+    body option,
+    .desktop-nav > a,
+    .dropdown > button,
+    .dropdown-menu a,
+    .mobile-menu a,
+    .section-title h2,
+    .section-title p,
+    .intro-copy h2,
+    .intro-copy p,
+    .why-copy h2,
+    .why-copy p,
+    .compliance-copy h2,
+    .compliance-copy p,
+    .symptoms-copy h2,
+    .symptoms-copy p,
+    .quote-copy h2,
+    .quote-copy p,
+    .quote-contact-box h3,
+    .quote-contact-box a,
+    .quote-form h3,
+    .quote-form p,
+    .testimonial-card p,
+    .testimonial-card strong,
+    .footer-col p,
+    .footer-col a,
+    .footer-col li,
+    .footer-bottom,
+    .footer-bottom span,
+    .areas-grid h2,
+    .areas-grid p,
+    .areas-list li,
+    .tab-card h3,
+    .tab-card p,
+    .clean-card h3,
+    .clean-card p,
+    .dark-section-head p,
+    .symptom-list li {
+      color: #ffffff !important;
+    }
+
+    /* Make form placeholder text white instead of grey */
+    input::placeholder,
+    textarea::placeholder {
+      color: #ffffff !important;
+      opacity: 1;
+    }
+
+    /* Make select placeholder/option text white */
+    select,
+    select option {
+      color: #ffffff !important;
+      background: #050505 !important;
+    }
+
+    /* Keep red accent labels red */
+    .red-kicker,
+    .section-title .pretitle,
+    .logo-title span {
+      color: var(--accent) !important;
+    }
+
+    /* Keep gold icons/stars gold */
+    .top-contact-bar .icon,
+    .stars,
+    .clean-number {
+      color: var(--gold) !important;
+    }
+
+    /* Keep red quote button text white */
+    .btn-red,
+    .quote-nav-btn {
+      color: #ffffff !important;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-contact-bar">
+      <div class="container top-contact-inner">
+        <div class="top-contact-left">
+          <span><b class="icon">✉</b> <a href="mailto:unitedhoodcompliance@gmail.com">unitedhoodcompliance@gmail.com</a></span>
+          <span><b class="icon">☎</b> <a href="tel:9512194424">951 219 4424</a></span>
+          <span><b class="icon">☎</b> <a href="tel:9515758400">951 575 8400</a></span>
+        </div>
+        <div class="top-contact-right">
+          <span><b class="icon">✓</b> Insured Commercial Service</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-header">
+      <div class="container header-inner">
+        <a class="logo-area" href="#home" aria-label="United Code Compliance home">
+          <img src="United hood compliance logo.PNG" alt="United Hood Compliance logo" />
+          <div class="logo-title">
+            <strong>United Code</strong>
+            <strong>Compliance</strong>
+            <span>Kitchen Exhaust Cleaning</span>
+          </div>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About Us</a>
+          <div class="dropdown">
+            <button type="button">Service ▾</button>
+            <div class="dropdown-menu">
+              <a href="#services">Commercial Kitchen Hood Cleaning</a>
+              <a href="#services">Kitchen Exhaust Cleaning</a>
+              <a href="#services">Rooftop Fan Cleaning</a>
+              <a href="#services">Filter Cleaning</a>
+              <a href="#services">Steam & Pressure Cleaning</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button type="button">Facilities We Serve ▾</button>
+            <div class="dropdown-menu">
+              <a href="#areas">Restaurants</a>
+              <a href="#areas">Food Service Facilities</a>
+              <a href="#areas">Commercial Kitchens</a>
+              <a href="#areas">Catering Kitchens</a>
+              <a href="#areas">Restaurant Groups</a>
+            </div>
+          </div>
+          <a href="#gallery">Before & After</a>
+          <a href="#quote">Contact Us</a>
+          <a class="quote-nav-btn" href="#quote">Get a Quote</a>
+        </nav>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">☰</button>
+      </div>
+      <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#areas">Facilities / Areas</a>
+        <a href="#gallery">Before & After</a>
+        <a href="#quote">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero-slider">
+      <div class="hero-slide">
+        <div class="container">
+          <div class="hero-content">
+            <div class="small-heading">Kitchen Hood Cleaning Service</div>
+            <h1>Best Commercial Hood Cleaning Services</h1>
+            <p>
+              Kitchen exhaust cleaning is about reducing grease buildup, improving airflow, and helping commercial kitchens stay safer and inspection ready.
+            </p>
+            <a class="btn btn-red" href="#quote">Free Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="hero-service-tabs">
+      <div class="container tabs-grid">
+        <article class="tab-card">
+          <h3>Kitchen Hood Cleaning</h3>
+          <p>Professional hood cleaning for restaurants, food service kitchens, and commercial cooking spaces.</p>
+          <a href="#quote">Free Quote</a>
+        </article>
+        <article class="tab-card">
+          <h3>Kitchen Exhaust Cleaning</h3>
+          <p>Clean exhaust systems help reduce grease hazards, odors, smoke, and airflow problems in busy kitchens.</p>
+          <a href="#quote">Free Quote</a>
+        </article>
+        <article class="tab-card">
+          <h3>Steam & Pressure Cleaning</h3>
+          <p>Heavy-duty cleaning for grease, grime, hood surfaces, filters, fans, and kitchen exhaust equipment.</p>
+          <a href="#quote">Free Quote</a>
+        </article>
+      </div>
+    </div>
+
+    <section class="intro-section" id="about">
+      <div class="container intro-grid">
+        <div class="intro-images">
+          <img src="IMG_4501.JPG" alt="Clean commercial kitchen hood" />
+          <img src="IMG_4498.JPG" alt="Commercial hood cleaning work" />
+        </div>
+        <div class="intro-copy">
+          <h2>Commercial Kitchen Exhaust Cleaning Services</h2>
+          <p>
+            When a kitchen is used daily, vaporized grease, smoke, and particles can stick to the exhaust system and become a serious concern if left uncleaned.
+          </p>
+          <p>
+            United Code Compliance provides insured hood cleaning services for commercial kitchens across Orange County, San Diego County, Los Angeles County, and Riverside County.
+          </p>
+          <a class="btn btn-blue" href="#quote">Contact Us Today</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-clean-section" id="services">
+      <div class="container">
+        <div class="dark-section-head">
+          <div>
+            <div class="red-kicker">What We Clean</div>
+            <h2>Deep cleaning for the areas grease hides.</h2>
+          </div>
+          <p>
+            The service focuses on commercial kitchens, restaurants, and facilities that need dependable hood system service and clear communication.
+          </p>
+        </div>
+
+        <div class="clean-card-grid">
+          <article class="clean-card">
+            <span class="clean-number">01</span>
+            <h3>Hood Vent Cleaning</h3>
+            <p>Detailed cleaning of commercial hood surfaces, filters, and accessible grease buildup around the cooking line.</p>
+          </article>
+
+          <article class="clean-card">
+            <span class="clean-number">02</span>
+            <h3>Exhaust Fan Cleaning</h3>
+            <p>Fan access, grease removal, and cleaning around rooftop or exterior exhaust fan components.</p>
+          </article>
+
+          <article class="clean-card">
+            <span class="clean-number">03</span>
+            <h3>Duct & Grease Path Cleaning</h3>
+            <p>Cleaning focused on reducing heavy grease accumulation throughout accessible exhaust pathways.</p>
+          </article>
+
+          <article class="clean-card">
+            <span class="clean-number">04</span>
+            <h3>Service Documentation</h3>
+            <p>Helpful service communication for kitchens that need records, timing, and clear next-service expectations.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-section">
+      <div class="container why-grid">
+        <div class="why-copy">
+          <h2>Why Choose Our Kitchen Exhaust Cleaning Service?</h2>
+          <p>
+            United Code Compliance is focused on commercial hood cleaning, grease removal, and exhaust system care for food service businesses that need dependable, insured service.
+          </p>
+          <ul class="check-list">
+            <li>Insured service for restaurants and commercial kitchens.</li>
+            <li>Service requests collect hood length, fan count, and last service date.</li>
+            <li>Local service across Orange County, San Diego, Los Angeles, and Riverside County.</li>
+            <li>Professional photo-friendly results for before-and-after documentation.</li>
+          </ul>
+          <a class="btn btn-red" href="#quote">Get A Quote</a>
+        </div>
+        <div class="why-card">
+          <img src="United hood compliance logo.PNG" alt="United Hood Compliance logo" />
+          <h3>United Code Compliance</h3>
+          <p>Commercial hood cleaning with a focus on safety, cleanliness, and dependable service.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="brand-section">
+      <div class="container">
+        <div class="section-title">
+          <div class="pretitle">Facilities We Serve</div>
+          <h2>Serving Commercial Kitchens Of All Sizes</h2>
+        </div>
+        <div class="brand-strip">
+          <div class="brand-box">Restaurants</div>
+          <div class="brand-box">Cafes</div>
+          <div class="brand-box">Food Trucks</div>
+          <div class="brand-box">Hotels</div>
+          <div class="brand-box">Schools</div>
+          <div class="brand-box">Event Venues</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="symptoms-section">
+      <div class="container symptoms-grid">
+        <div class="symptoms-copy">
+          <h2>Do you need a commercial kitchen exhaust cleaning service?</h2>
+          <p>
+            You can call United Code Compliance if your hood system is showing signs of grease buildup, poor airflow, or overdue maintenance.
+          </p>
+          <a class="btn btn-red" href="tel:9512194424">Call Now</a>
+        </div>
+        <div class="symptom-list">
+          <ul>
+            <li>There is grease buildup in your kitchen exhaust hood.</li>
+            <li>There is difficulty drawing air through the exhaust system.</li>
+            <li>There is an increase in smoke or temperature in your restaurant.</li>
+            <li>There is an unpleasant smell coming from the kitchen hood.</li>
+            <li>Your filters, fan, or hood system look overdue for service.</li>
+            <li>You do not know when the hood was last serviced.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="compliance-section">
+      <div class="container compliance-grid">
+        <div class="compliance-image">
+          <img src="IMG_5417.JPG" alt="Commercial kitchen hood cleaning result" />
+        </div>
+        <div class="compliance-copy">
+          <h2>Helping Commercial Kitchens Stay Cleaner And Safer</h2>
+          <p>
+            A properly cleaned hood and exhaust system helps reduce grease hazards and supports a safer work environment for your kitchen staff.
+          </p>
+          <p>
+            United Code Compliance focuses on the areas where grease commonly builds up: hoods, filters, fans, duct access points, and nearby rooftop equipment.
+          </p>
+          <a class="btn btn-blue" href="#quote">Contact Us Today</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-gallery-section" id="gallery">
+      <div class="container">
+        <div class="dark-section-head">
+          <div>
+            <div class="red-kicker">Field Photos</div>
+            <h2>Real kitchen exhaust cleaning work.</h2>
+          </div>
+          <p>
+            Use these photos to show the difference between neglected grease buildup, active cleaning, and cleaned exhaust components.
+          </p>
+        </div>
+
+        <div class="field-gallery-grid">
+          <button class="field-photo-card large" data-img="IMG_5418.JPG" aria-label="Open gallery photo">
+            <img src="IMG_5418.JPG" alt="Grease buildup inside commercial exhaust fan before cleaning" />
+            <span class="photo-caption"><span>Before Service</span><span>Heavy Grease</span></span>
+          </button>
+
+          <button class="field-photo-card" data-img="IMG_4500.JPG" aria-label="Open gallery photo">
+            <img src="IMG_4500.JPG" alt="Cleaned fan housing after hood cleaning service" />
+            <span class="photo-caption"><span>After Cleaning</span><span>Fan Housing</span></span>
+          </button>
+
+          <button class="field-photo-card" data-img="IMG_4497.JPG" aria-label="Open gallery photo">
+            <img src="IMG_4497.JPG" alt="Clean commercial hood vent interior" />
+            <span class="photo-caption"><span>Hood Interior</span><span>Detail Work</span></span>
+          </button>
+
+          <button class="field-photo-card" data-img="IMG_4501.JPG" aria-label="Open gallery photo">
+            <img src="IMG_4501.JPG" alt="Commercial exhaust fan component cleaning" />
+            <span class="photo-caption"><span>Fan Service</span><span>Access Areas</span></span>
+          </button>
+
+          <button class="field-photo-card" data-img="IMG_5417.JPG" aria-label="Open gallery photo">
+            <img src="IMG_5417.JPG" alt="Cleaned circular exhaust fan assembly" />
+            <span class="photo-caption"><span>Final Pass</span><span>Inspection Ready</span></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials-section">
+      <div class="container">
+        <div class="section-title">
+          <div class="pretitle">What Customers Are Saying</div>
+          <h2>Reliable Service For Busy Kitchens</h2>
+        </div>
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>“The team was responsive, professional, and helped get our hood system cleaned without slowing down our kitchen.”</p>
+            <strong>Restaurant Manager</strong>
+          </article>
+          <article class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>“They asked the right questions before scheduling and showed up ready to handle the job.”</p>
+            <strong>Food Service Owner</strong>
+          </article>
+          <article class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>“Great communication and a cleaner kitchen exhaust system after service. Would call again.”</p>
+            <strong>Commercial Kitchen Client</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-section" id="quote">
+      <div class="container quote-grid">
+        <div class="quote-copy">
+          <h2>REQUEST A QUOTE</h2>
+          <p>Tell us about your requirements and United Code Compliance will get back to you with service information.</p>
+          <p>Please include the length of the hood, number of fans, and when it was last serviced.</p>
+          <div class="quote-contact-box">
+            <h3>Contact Info</h3>
+            <a href="tel:9512194424">951 219 4424</a>
+            <a href="tel:9515758400">951 575 8400</a>
+            <a href="mailto:unitedhoodcompliance@gmail.com">unitedhoodcompliance@gmail.com</a>
+          </div>
+        </div>
+
+        <form class="quote-form" id="quoteForm">
+          <h3>Get A Quote</h3>
+          <p>Tell us about your commercial kitchen hood system.</p>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="firstName">First Name *</label>
+              <input id="firstName" name="firstName" type="text" required />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name *</label>
+              <input id="lastName" name="lastName" type="text" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input id="phone" name="phone" type="tel" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+            <div class="form-group">
+              <label for="hoodLength">Length Of Hood *</label>
+              <input id="hoodLength" name="hoodLength" type="text" placeholder="Example: 12 ft" required />
+            </div>
+            <div class="form-group">
+              <label for="fans">Number Of Fans *</label>
+              <input id="fans" name="fans" type="number" min="0" required />
+            </div>
+            <div class="form-group">
+              <label for="lastServiced">When Was It Last Serviced?</label>
+              <input id="lastServiced" name="lastServiced" type="text" placeholder="Example: 6 months ago" />
+            </div>
+            <div class="form-group">
+              <label for="serviceWanted">Mention The Service You Want</label>
+              <select id="serviceWanted" name="serviceWanted">
+                <option value="">Select service</option>
+                <option>Commercial Kitchen Hood Cleaning</option>
+                <option>Kitchen Exhaust Cleaning</option>
+                <option>Exhaust Fan Cleaning</option>
+                <option>Filter Cleaning</option>
+                <option>Steam & Pressure Cleaning</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label for="notes">Additional Notes</label>
+              <textarea id="notes" name="notes" maxlength="180" placeholder="Tell us about the kitchen, city, access, schedule preference, or any inspection concerns."></textarea>
+            </div>
+          </div>
+          <button class="btn btn-red form-submit" type="submit">Request Quote</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="areas-footer-section" id="areas">
+      <div class="container areas-grid">
+        <div>
+          <h2>Areas We Serve</h2>
+          <p>United Code Compliance services restaurants and commercial kitchens across Southern California.</p>
+        </div>
+        <ul class="areas-list">
+          <li>Orange County</li>
+          <li>San Diego County</li>
+          <li>Los Angeles County</li>
+          <li>Riverside County</li>
+          <li>Nearby Southern California Cities</li>
+          <li>Restaurants</li>
+          <li>Commercial Kitchens</li>
+          <li>Food Service Facilities</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-main">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <img class="footer-logo" src="United hood compliance logo.PNG" alt="United Code Compliance logo" />
+          <p>Kitchen exhaust cleaning and hood cleaning services for restaurants and commercial kitchens.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Services</h3>
+          <ul>
+            <li>Commercial Hood Cleaning</li>
+            <li>Kitchen Exhaust Cleaning</li>
+            <li>Exhaust Fan Cleaning</li>
+            <li>Filter Cleaning</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Areas</h3>
+          <ul>
+            <li>Orange County</li>
+            <li>San Diego County</li>
+            <li>Los Angeles County</li>
+            <li>Riverside County</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Contact Info</h3>
+          <p><a href="tel:9512194424">951 219 4424</a></p>
+          <p><a href="tel:9515758400">951 575 8400</a></p>
+          <p><a href="mailto:unitedhoodcompliance@gmail.com">unitedhoodcompliance@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <span>Copyright © <span id="year"></span> United Code Compliance. All Rights Reserved.</span>
+        <span>Insured Commercial Hood Cleaning</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button id="closeLightbox" aria-label="Close image">×</button>
+    <img id="lightboxImage" src="" alt="Expanded gallery image" />
+  </div>
+
+  <script>
+    const mobileToggle = document.getElementById("mobileToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    mobileToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("open");
+    });
+
+    document.querySelectorAll(".mobile-menu a").forEach((link) => {
+      link.addEventListener("click", () => mobileMenu.classList.remove("open"));
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const closeLightbox = document.getElementById("closeLightbox");
+
+    document.querySelectorAll("[data-img]").forEach((button) => {
+      button.addEventListener("click", () => {
+        lightboxImage.src = button.dataset.img;
+        lightbox.classList.add("active");
+        lightbox.setAttribute("aria-hidden", "false");
+      });
+    });
+
+    function closeImage() {
+      lightbox.classList.remove("active");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImage.src = "";
+    }
+
+    closeLightbox.addEventListener("click", closeImage);
+
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) closeImage();
+    });
+
+    const API_BASE_URL = "https://YOUR-RENDER-BACKEND.onrender.com";
+
+    const quoteForm = document.getElementById("quoteForm");
+
+    quoteForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const submitButton = quoteForm.querySelector(".form-submit");
+      const originalText = submitButton.textContent;
+
+      submitButton.disabled = true;
+      submitButton.textContent = "Submitting...";
+
+      const formData = new FormData(quoteForm);
+
+      const payload = {
+        firstName: formData.get("firstName"),
+        lastName: formData.get("lastName"),
+        phone: formData.get("phone"),
+        email: formData.get("email"),
+        hoodLength: formData.get("hoodLength"),
+        fans: Number(formData.get("fans")),
+        lastServiced: formData.get("lastServiced"),
+        serviceWanted: formData.get("serviceWanted"),
+        notes: formData.get("notes")
+      };
+
+      try {
+        const response = await fetch(`${API_BASE_URL}/api/leads`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await response.json();
+
+        if (!response.ok || !result.ok) {
+          throw new Error(result.detail || "Submission failed.");
+        }
+
+        alert("Thank you! Your quote request has been submitted.");
+        quoteForm.reset();
+
+      } catch (error) {
+        console.error(error);
+        alert("Something went wrong. Please call or text United Code Compliance directly.");
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = originalText;
+      }
+    });
+
+  </script>
+</body>
+</html>
