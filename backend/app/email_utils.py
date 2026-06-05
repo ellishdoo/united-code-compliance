@@ -1,25 +1,22 @@
 import os
-import smtplib
-from email.message import EmailMessage
+import resend
 
 
-SMTP_HOST = os.getenv("SMTP_HOST", "smtp.gmail.com")
-SMTP_PORT = int(os.getenv("SMTP_PORT", "587"))
-SMTP_USER = os.getenv("SMTP_USER")
-SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
-
+RESEND_API_KEY = os.getenv("RESEND_API_KEY")
 LEAD_TO_EMAIL = os.getenv("LEAD_TO_EMAIL", "unitedhoodcompliance@gmail.com")
-LEAD_FROM_EMAIL = os.getenv("LEAD_FROM_EMAIL", SMTP_USER)
+LEAD_FROM_EMAIL = os.getenv("LEAD_FROM_EMAIL", "United Code Compliance <onboarding@resend.dev>")
 
 
 def send_lead_notification(lead_id: int, lead):
-    if not SMTP_USER or not SMTP_PASSWORD:
-        print("Email skipped: SMTP_USER or SMTP_PASSWORD is missing.")
+    if not RESEND_API_KEY:
+        print("Email skipped: RESEND_API_KEY is missing.")
         return False
+
+    resend.api_key = RESEND_API_KEY
 
     subject = f"New Quote Request #{lead_id} - United Code Compliance"
 
-    body = f"""
+    text_body = f"""
 New quote request received.
 
 Lead ID: {lead_id}
@@ -37,20 +34,37 @@ Additional Notes:
 {lead.notes or "No notes provided."}
 """
 
-    msg = EmailMessage()
-    msg["Subject"] = subject
-    msg["From"] = LEAD_FROM_EMAIL
-    msg["To"] = LEAD_TO_EMAIL
-    msg.set_content(body)
+    html_body = f"""
+    <h2>New Quote Request</h2>
+    <p><strong>Lead ID:</strong> {lead_id}</p>
+
+    <h3>Customer Info</h3>
+    <p><strong>Name:</strong> {lead.firstName} {lead.lastName}</p>
+    <p><strong>Phone:</strong> {lead.phone}</p>
+    <p><strong>Email:</strong> {lead.email}</p>
+
+    <h3>Hood System Info</h3>
+    <p><strong>Length of Hood:</strong> {lead.hoodLength}</p>
+    <p><strong>Number of Fans:</strong> {lead.fans}</p>
+    <p><strong>Last Serviced:</strong> {lead.lastServiced or "Not provided"}</p>
+    <p><strong>Service Wanted:</strong> {lead.serviceWanted or "Not selected"}</p>
+
+    <h3>Additional Notes</h3>
+    <p>{lead.notes or "No notes provided."}</p>
+    """
 
     try:
-        with smtplib.SMTP(SMTP_HOST, SMTP_PORT) as server:
-            server.starttls()
-            server.login(SMTP_USER, SMTP_PASSWORD)
-            server.send_message(msg)
+        resend.Emails.send({
+            "from": LEAD_FROM_EMAIL,
+            "to": [LEAD_TO_EMAIL],
+            "subject": subject,
+            "html": html_body,
+            "text": text_body,
+            "reply_to": lead.email,
+        })
 
         return True
 
     except Exception as e:
-        print(f"Email notification failed: {e}")
+        print(f"Resend email notification failed: {e}")
         return False
